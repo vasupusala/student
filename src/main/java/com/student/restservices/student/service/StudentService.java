@@ -14,9 +14,10 @@ public class StudentService {
     private StudentRepository studentRepository;
 
     public List<Student> getAllStudents(){
-        List<Student> students = new ArrayList<>();
-        studentRepository.findAll().forEach(students::add);
+       List<Student> students = studentRepository.findAll();
+//        studentRepository.findAll().forEach(students::add);
         return students;
+       // return studentRepository.findAll();
     }
     public Student getStudentById(int id){
      // return studentRepository.findById(id);
